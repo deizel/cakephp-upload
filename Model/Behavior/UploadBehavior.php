@@ -1471,7 +1471,7 @@ class UploadBehavior extends ModelBehavior {
 			'type' => $headers['Content-Type'],
 			'tmp_name' => $tmpFile,
 			'error' => 1,
-			'size' => (isset($headers['content-length']) ? $headers['Content-Length'] : 0),
+			'size' => (isset($headers['Content-Length']) ? $headers['Content-Length'] : 0),
 		);
 
 		$file = file_put_contents($tmpFile, $socket->response['body']);
